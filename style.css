@@ -519,13 +519,20 @@ margin-bottom: .8rem;
  }
  aside{
     position: fixed;
-    left: 0;
+    left: -100%;
     background: var(--color-white);
     width: 18rem;
-    z-index: 4;
+    z-index: 3;
+    height: 100vh;
     box-shadow: 1rem 3rem 4rem var(--color-light);
     padding-right: var(--card-padding);
     display: none;
+   animation: showmenu 600ms ease forwards;
+ }
+ @keyframes showmenu {
+    to{
+        left: 0;
+    }
  }
  aside .logo{
     margin-left: 1rem;
@@ -535,6 +542,9 @@ margin-bottom: .8rem;
  }
  aside .logo h3{
     display: inline;
+ }
+ aside .sidebar h3{
+    display: block;
  }
  aside .sidebar a{
     width: 100%;
